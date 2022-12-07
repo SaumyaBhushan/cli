@@ -2699,10 +2699,45 @@ Handle plugins
 **SEE ALSO**
 
 * [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [ignite plugin add](#ignite-plugin-add)	 - Adds a plugin declaration to a chain's plugin configuration
 * [ignite plugin describe](#ignite-plugin-describe)	 - Output information about the a registered plugin
 * [ignite plugin list](#ignite-plugin-list)	 - List declared plugins and status
+* [ignite plugin remove](#ignite-plugin-remove)	 - Removes a plugin declaration from a chain's plugin configuration
 * [ignite plugin scaffold](#ignite-plugin-scaffold)	 - Scaffold a new plugin
 * [ignite plugin update](#ignite-plugin-update)	 - Update plugins
+
+
+## ignite plugin add
+
+Adds a plugin declaration to a chain's plugin configuration
+
+**Synopsis**
+
+Adds a plugin declaration to a chain's plugin configuration.
+				Respects key value pairs declared after the plugin path to be added to the generated configurationdefinition
+				example:
+					ignite plugin add /path/to/plugin/ foo:bar
+		
+
+```
+ignite plugin add [path] [args] [flags]
+```
+
+**Options**
+
+```
+  -h, --help   help for add
+```
+
+**Options inherited from parent commands**
+
+```
+  -x, --plugins string   path to Ignite plugins config file (default: ./plugins.yml)
+```
+
+**SEE ALSO**
+
+* [ignite plugin](#ignite-plugin)	 - Handle plugins
 
 
 ## ignite plugin describe
@@ -2750,6 +2785,31 @@ ignite plugin list [flags]
 
 ```
   -h, --help   help for list
+```
+
+**Options inherited from parent commands**
+
+```
+  -x, --plugins string   path to Ignite plugins config file (default: ./plugins.yml)
+```
+
+**SEE ALSO**
+
+* [ignite plugin](#ignite-plugin)	 - Handle plugins
+
+
+## ignite plugin remove
+
+Removes a plugin declaration from a chain's plugin configuration
+
+```
+ignite plugin remove [path] [flags]
+```
+
+**Options**
+
+```
+  -h, --help   help for remove
 ```
 
 **Options inherited from parent commands**
